@@ -9,7 +9,7 @@ These are files to create a environment with [MySQL Server 5.7](https://dev.mysq
 
 
 ## Architecture
-There will be 1 single VM with 1 MySQL instance accessible through port 23306.
+There will be 1 single VM with 1 MySQL instance accessible externally through port 23306.
 
 
 ## Pre-reqs
@@ -37,12 +37,20 @@ On Windows, Vagrant may require an updated version of [Powershell](https://docs.
   - You may need to specify a authentication private key certificate as IdentityFile (SSH auth method: private key);
   - Check where the IdentityFile is located with ```vagrant ssh-config```;
   - After successful login you can get ```root``` privileges with ```sudo su -```;
+- Access MySQL:
+  - Inside the VM with ```mysql -uroot -pRoot#123```;
+  - Outside the VM with ```mysql -uremote -pRemote#123 --port=23306```;
 
 
 ## Rollback
-If you need, you can remove the datadir with:
+You can destroy your entire VM with ```vagrant -f destroy```.
+
+If you need, you can remove the data files and keep installed binaries with:
+
 ```
-mysqld_multi --password=Root#123 stop
-rm -Rf /data/mysql*
+service mysqld stop
+rm -Rf /var/lib/mysql/*
+rm -f /var/log/mysqld.log
+rm -f /etc/my.cnf
 ```
-You can destroy your VM with ```vagrant -f destroy```.
+
