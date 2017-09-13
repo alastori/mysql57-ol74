@@ -37,7 +37,7 @@ On Windows, Vagrant may require an updated version of [Powershell](https://docs.
   - You may need to specify a authentication private key certificate as IdentityFile (SSH auth method: private key);
   - Check where the IdentityFile is located with ```vagrant ssh-config```;
   - After successful login you can get ```root``` privileges with ```sudo su -```;
-- Access MySQL:
+- Access MySQL;
   - Inside the VM with ```mysql -uroot -pRoot#123```;
   - Outside the VM with ```mysql -uremote -pRemote#123 --port=23306```;
 
@@ -49,7 +49,7 @@ If you need, you can remove the data files and keep installed binaries with:
 
 ```
 service mysqld stop
-rm -Rf /var/lib/mysql/*
+rm -Rf /var/lib/mysql*
 rm -f /var/log/mysqld.log
 rm -f /etc/my.cnf
 ```
