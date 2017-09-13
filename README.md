@@ -9,7 +9,7 @@ These are files to create a environment with [MySQL Server 5.7](https://dev.mysq
 
 
 ## Architecture
-There will be 1 single VM with 1 MySQL instance accessible through ports 23306.
+There will be 1 single VM with 1 MySQL instance accessible through port 23306.
 
 
 ## Pre-reqs
@@ -17,7 +17,9 @@ You need to have altready installed:
 - [Vagrant](https://www.vagrantup.com/downloads.html) 
 - [Virtualbox](https://www.virtualbox.org/wiki/Downloads)
 
-The rest of the software will be automatically downloaded and installed. If you already have Vagrant and Virtualbox installed, consider upgrade them.
+The rest of the software will be automatically downloaded and installed. 
+If you already have Vagrant and Virtualbox installed, consider upgrade them.
+On Windows, Vagrant may require an updated version of [Powershell](https://docs.microsoft.com/en-us/powershell/scripting/setup/installing-windows-powershell).
 
 
 ## How to use

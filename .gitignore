@@ -1,0 +1,7 @@
+# Vagrant folder #
+##################
+.vagrant
+
+# Win shortcut files #
+######################
+*.lnk
