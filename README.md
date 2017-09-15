@@ -1,7 +1,7 @@
 MySQL 5.7 and Oracle Linux 7.4
 ==============================
 
-A environment with MySQL Server 5.7 and Oracle Linux 7 using Vagrant + Virtualbox, recommended for testing or training purposes.
+Environment with MySQL Server 5.7 and Oracle Linux 7 using Vagrant + Virtualbox, recommended for testing or training purposes.
 
 
 ## Synopsis
